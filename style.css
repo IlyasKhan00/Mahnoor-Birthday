@@ -61,8 +61,8 @@ body {
 /* 🌿 LEAVES (FIXED) */
 .leaf {
   position: absolute;
-  width: 18px;
-  height: 35px;
+  width: 15px;
+  height: 30px;
   background: #2ee6a6;
   border-radius: 50%;
   bottom: 40px;
