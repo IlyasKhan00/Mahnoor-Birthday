@@ -1,26 +1,23 @@
 const messages = [
   "Happy Birthday Mahnoor 💖",
   "You deserve all the happiness in the world ✨",
-  "Hope your day feels special YAEYY!! 🎂",
-  "You are veryy special JANNUU💕",
-  "Wishing you so much lovee merii jann",
-  "I Love You So Much Mera PETTUU BACHHAWW 💖",
-  "You deserve every good thing in the world",
+  "Hope your day feels special 🎂",
+  "You are very special 💕",
+  "Wishing you so much love ❤️",
+  "I Love You So Much 💖",
+  "You deserve every good thing in the world ✨",
   "ILYSMMM :)",
-  "UMWWAAHHHH "
+  "UMWAAHHHH 😘"
 ];
-
 
 function interact() {
   const msg = messages[Math.floor(Math.random() * messages.length)];
   document.getElementById("message").innerText = msg;
 }
 
-// 🎊 continuous confetti rain
+/* 🎊 confetti system */
 function startConfettiRain() {
-  setInterval(() => {
-    createConfetti();
-  }, 120); // speed of falling confetti
+  setInterval(createConfetti, 120);
 }
 
 function createConfetti() {
@@ -45,5 +42,5 @@ function randomColor() {
   return colors[Math.floor(Math.random() * colors.length)];
 }
 
-// start automatically when page loads
+/* start confetti on load */
 startConfettiRain();
