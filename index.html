@@ -9,18 +9,13 @@
 
 <body>
 
-  <!-- glowing background -->
   <div class="glow g1"></div>
   <div class="glow g2"></div>
 
-  <!-- confetti -->
-  <div id="confetti"></div>
-
-  <!-- scene wrapper -->
   <div class="scene">
 
-    <!-- flower -->
-    <div class="flower">
+    <!-- 🌸 flower -->
+    <div class="flower" onclick="interactFlower()">
       <div class="stem"></div>
 
       <div class="leaf l1"></div>
@@ -38,17 +33,48 @@
       </div>
     </div>
 
-    <!-- birthday card -->
+    <!-- 💌 card -->
     <div class="card">
       <h1>Happy Birthday Mahnoor 🎂</h1>
-      <p class="sub">a soft little world for you 💖</p>
 
       <button onclick="interact()">wish me ✨</button>
+      <button onclick="toggleMusic()" class="music-btn">🎵 music</button>
+      <p id="typewriter"></p>
+
+  <p id="message"></p>
       <p id="message"></p>
     </div>
 
   </div>
+  <!-- 🎉 INTRO SCREEN -->
+<div id="introScreen">
+  <div class="introBox">
+    <h1>🎂 Surprise for Mahnoor 💖</h1>
+    <p>Click to enter your birthday world ✨</p>
+    <button onclick="startExperience()">Start 🎉</button>
+  </div>
+</div>
+<audio id="introSound">
+  <source src="intro.mp3" type="audio/mpeg">
+</audio>
+  <!-- 🎵 music -->
+  <audio id="bgMusic" preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
 
   <script src="script.js"></script>
 </body>
 </html>
+<!-- 🎬 LOADING SCREEN -->
+<div id="loadingScreen">
+  <div class="loaderText">Preparing something special for Mahnoor 💖...</div>
+</div>
+
+<!-- 🎉 INTRO SCREEN -->
+<div id="introScreen" style="display:none;">
+  <div class="introBox">
+    <h1>🎂 Surprise for Mahnoor 💖</h1>
+    <p>Click to enter your birthday world ✨</p>
+    <button onclick="startExperience()">Start 🎉</button>
+  </div>
+</div>
