@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at top, #0b0b14, #0d1020, #000);
+  font-family: Arial;
+}
+
+/* 🎉 banner */
+.banner {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffb6c1;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  z-index: 50;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* 🌟 glow */
+.glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(255,182,193,0.12);
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+  animation: float 6s infinite ease-in-out;
+}
+
+.g1 { top: 10%; left: 10%; }
+.g2 { bottom: 10%; right: 10%; }
+
+/* 🌸 flower */
+
+/* 🌷 flower container */
+
+/* 🌷 container */
+.flower {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 🌱 stem */
+.stem {
+  width: 4px;
+  height: 180px;
+  background: #4ad29f;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/* 🌿 LEAVES (FIXED) */
+.leaf {
+  position: absolute;
+  width: 18px;
+  height: 35px;
+  background: #2ee6a6;
+  border-radius: 50%;
+  bottom: 40px;
+  opacity: 1;
+}
+
+.l1 {
+  left: -20px;
+  transform: rotate(-35deg);
+}
+
+.l2 {
+  right: -20px;
+  transform: rotate(35deg);
+}
+
+/* 🌸 bloom container (THIS is what makes animation work) */
+.bloom {
+  position: absolute;
+  bottom: 110px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  animation: bloom 2.5s ease-out forwards;
+}
+
+/* 🌸 petals */
+.petal {
+  position: absolute;
+  width: 26px;
+  height: 40px;
+  background: white;
+  border-radius: 60%;
+  left: 50%;
+  top: 50%;
+  transform-origin: bottom center;
+}
+
+/* tighter + nicer bloom shape */
+.p1 { transform: translate(-50%, -50%) rotate(0deg) translateY(-2px); }
+.p2 { transform: translate(-50%, -50%) rotate(45deg) translateY(-2px); }
+.p3 { transform: translate(-50%, -50%) rotate(90deg) translateY(-2px); }
+.p4 { transform: translate(-50%, -50%) rotate(135deg) translateY(-2px); }
+.p5 { transform: translate(-50%, -50%) rotate(180deg) translateY(-2px); }
+.p6 { transform: translate(-50%, -50%) rotate(225deg) translateY(-2px); }
+.p7 { transform: translate(-50%, -50%) rotate(270deg) translateY(-2px); }
+.p8 { transform: translate(-50%, -50%) rotate(315deg) translateY(-2px); }
+
+/* 🌸 ACTUAL BLOOM ANIMATION */
+@keyframes bloom {
+  0% {
+    transform: translateX(-50%) scale(0);
+  }
+  60% {
+    transform: translateX(-50%) scale(1.1);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+/* 💌 card */
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: rgba(255,255,255,0.06);
+  padding: 30px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  z-index: 10;
+}
+
+button {
+  padding: 12px 18px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* 🎊 confetti */
+.confetti {
+  position: absolute;
+  width: 6px;
+  height: 10px;
+  top: -10px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
